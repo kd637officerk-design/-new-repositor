@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Diario - AI Notes, Diary & Video Studio</title>
+    <meta name="description" content="An all-in-one customizable diary, notes, and video editor app with cloud sync, Google account support, custom 4K/GIF wallpapers, and offline accessibility." />
+    <meta property="og:title" content="Diario - AI Notes, Diary & Video Studio" />
+    <meta property="og:description" content="An all-in-one customizable diary, notes, and video editor app with cloud sync, Google account support, custom 4K/GIF wallpapers, and offline accessibility." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0b0c0e" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- App icons (PC + Phone home screen) -->
+    <link rel="icon" type="image/png" sizes="512x512" href="./assets/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="./assets/icon-512.png" />
+    <link rel="shortcut icon" href="./assets/icon-512.png" />
+
+    <script type="module" crossorigin src="./assets/index-DkzgGMj-.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CbVdapkL.css">
+
+    <style>
+      /* Batman rain cover – visible on main screen (phone + PC) */
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #0b0c0e;
+        overflow: hidden;
+      }
+
+      #batman-cover {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        background: #0b0c0e url('./assets/batman-cover.gif') center center / cover no-repeat;
+        pointer-events: none;
+      }
+
+      /* Dim overlay so UI text stays readable */
+      #batman-cover::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+      }
+
+      #root {
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body class="bg-[#0b0c0e] text-white antialiased selection:bg-amber-500/30 selection:text-amber-200 overflow-x-hidden">
+    <!-- Animated cover that shows on the main screen -->
+    <div id="batman-cover" aria-hidden="true"></div>
+
+    <div id="root"></div>
+  </body>
+</html>
